@@ -539,6 +539,7 @@ MonoBehaviour:
   health: 10
   pointsToAward: 20
   damage: 20
+  speed: 0
   minMissileDistance: 0
   minWarpDistance: 0
   minWarpPlayerDistance: 0
@@ -565,7 +566,7 @@ MonoBehaviour:
   explosionSmoke: {fileID: 4076476913790432983, guid: 0aebfbc7373e51a4592054e2cca77c17,
     type: 3}
   minSpeed: 8
-  maxSpeed: 16
+  maxSpeed: 14
   maxSteerForce: 200
   obstacleMask:
     serializedVersion: 2

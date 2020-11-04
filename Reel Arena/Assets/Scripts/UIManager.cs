@@ -31,6 +31,7 @@ public class UIManager : MonoBehaviour
     public Canvas gameOverCanvas;
     public Canvas creditsCanvas;
     public Canvas howToPlayCanvas;
+    public Canvas optionsCanvas;
 
     [Header("Main Menu Canvas Settings")]
     public Button quitToDesktopButton;
@@ -56,6 +57,10 @@ public class UIManager : MonoBehaviour
     [Header("Game Over Canvas Settings")]
     public TMP_Text finalStatsText;
 
+    [Header("Options Canvas Settings")]
+    public Slider sensitivitySlider;
+    public TMP_Text sliderText;
+
     public void HideAllCanvases()
     {
         mainMenuCanvas.gameObject.SetActive(false);
@@ -63,6 +68,7 @@ public class UIManager : MonoBehaviour
         gameOverCanvas.gameObject.SetActive(false);
         creditsCanvas.gameObject.SetActive(false);
         howToPlayCanvas.gameObject.SetActive(false);
+        optionsCanvas.gameObject.SetActive(false);
     }
 
     public void InitHUD()
@@ -85,6 +91,12 @@ public class UIManager : MonoBehaviour
     {
         HideAllCanvases();
         howToPlayCanvas.gameObject.SetActive(true);
+    }
+
+    public void ShowOptions()
+    {
+        HideAllCanvases();
+        optionsCanvas.gameObject.SetActive(true);
     }
 
     public void ShowFinalStats()

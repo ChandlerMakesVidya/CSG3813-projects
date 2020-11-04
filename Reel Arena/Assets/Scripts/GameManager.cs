@@ -60,6 +60,8 @@ public class GameManager : MonoBehaviour
     public AudioClip hitMarker;
     public AudioClip killMarker;
 
+    public float mouseSensitivity;
+
     #endregion
 
     private void Start()
@@ -163,6 +165,13 @@ public class GameManager : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
         }
+    }
+
+    public void ChangeSensitivity()
+    {
+        float value = UIManager.sensitivitySlider.value;
+        mouseSensitivity = value;
+        UIManager.sliderText.text = value.ToString("F0");
     }
 
     public void QuitGame()

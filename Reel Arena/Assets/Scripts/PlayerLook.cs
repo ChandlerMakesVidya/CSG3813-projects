@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
 {
-    [SerializeField] private float mouseSensitivity = 150f;
     [SerializeField] private Transform playerBody;
     [SerializeField] private Transform playerHead;
     [SerializeField] private Transform viewPunch;
@@ -30,8 +29,8 @@ public class PlayerLook : MonoBehaviour
 
     private void CameraRotation()
     {
-        float mX = Input.GetAxisRaw("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mY = Input.GetAxisRaw("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float mX = Input.GetAxisRaw("Mouse X") * GameManager.GM.mouseSensitivity * Time.deltaTime;
+        float mY = Input.GetAxisRaw("Mouse Y") * GameManager.GM.mouseSensitivity * Time.deltaTime;
 
         xAxisClamp += mY;
 

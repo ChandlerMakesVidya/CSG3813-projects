@@ -74,7 +74,7 @@ public class Torpedo : Enemy
         speed = Mathf.Clamp(speed, minSpeed, maxSpeed);
         velocity = dir * speed;
 
-        cachedTransform.position += velocity * Time.deltaTime * Randomizer.EnemySpeedModifier;
+        cachedTransform.position += velocity * Time.deltaTime;
         cachedTransform.forward = dir;
         position = cachedTransform.position;
         forward = dir;
